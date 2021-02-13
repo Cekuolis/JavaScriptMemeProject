@@ -1,0 +1,65 @@
+*{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    margin-top: 50px;
+    position: relative; 
+    height: 115vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Assets/IMG/2014244.png);
+    background-size: cover;
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.budget{
+    margin: 2px;
+    padding: 20px;
+    border: rgb(107, 109, 114) 2px solid;
+    border-radius: 15px;
+    padding: 15px;
+    opacity: 0.9;
+}
+
+
+.calculator{
+    margin: 2px;
+    padding: 20px;
+    border:  rgb(107, 109, 114) 2px solid;
+    border-radius: 15px;
+    
+    
+}
+.chart{
+    height: 300px;
+}
+
+.clock {
+    font-size:32px;
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 9px;
+    border: rgb(107, 109, 114) 2px solid;
+    border-radius: 15px;
+}
+
+.listIncome{
+    margin: 2px;
+    padding: 20px;
+    border:  rgb(107, 109, 114) 2px solid;
+    border-radius: 15px;
+}
+
+
+
+

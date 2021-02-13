@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Manager</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <main>
+  <div class="container-fliud">
+    <div class="container ">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+          <div id="clock" class="clock text-center" onload="showTime()">
+          </div>
+          <blockquote class="blockquote text-center">
+            <footer class="blockquote-footer">Time is Money<cite title="Source Title"> "Advice to a Young
+                Tradesman"</cite></footer>
+          </blockquote>
+          <div class="row turinys">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6  calculator">
+              <h3>BUDGET CALCULATOR</h3>
+              <form id="forma" name="forma">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" id="text" class="form-control" placeholder="Name">
+                    <small id="helpText" class="form-text text-muted">Enter name of income or expendeture</small>
+                  </div>
+                  <div class="col">
+                    <input type="number" id="number" class="form-control" placeholder="Amount" step=".01">
+                    <small id="help" class="form-text text-muted">Enter amount</small>
+                  </div>
+                  <div class="col"><button type="submit" id="btn" class="btn btn-info">Add</button></div>
+                </div>
+                <div class="row p-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                    <label class="form-check-label" for="inlineRadio1">Income</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                    <label class="form-check-label" for="inlineRadio2">Fixed costs</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                    <label class="form-check-label" for="inlineRadio3">Variable costs</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4">
+                    <label class="form-check-label" for="inlineRadio4">Unnecessary costs</label>
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col"></div>
+              </div>
+              <div class="row p-2">
+                <div class="col">
+                  <button type="button" class="btn btn-secondary" onclick="fetchAdvice()">Get
+                    advice!</button>
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="col">
+                  <blockquote class="blockquote">
+                    <p id="tekstas" class="p-3">Need some life advice? Press Get advice button.</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col budget">
+              <h3>YOUR BUDGET CHART</h3>
+              <button type="button" class="btn btn-secondary m-2" onclick="createChart()">Calculate</button>
+              <div id="chartdiv" class="chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col listIncome">
+          <ul class="income list-group text-center" id="income"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+</main>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="JSS/script.js"></script>
+</body>
+
+  
+</html>
