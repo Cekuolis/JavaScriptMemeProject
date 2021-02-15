@@ -193,6 +193,5 @@ function drawing() {
 
 
 // Envent listeners
-
 forma.addEventListener("submit", value);
 forma.addEventListener("submit", resetForma);
